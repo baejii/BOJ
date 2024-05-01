@@ -23,17 +23,13 @@
 
 const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
 
-const words = input.map(word => word.split(''));
-const maxLength = Math.max(...words.map(word => word.length));
-
-console.log(words);
-console.log(maxLength);
+const maxLength = Math.max(...input.map(word => word.length));
 
 let result = "";
 for (let i = 0; i < maxLength; i++) {
-    for (let j = 0; j < words.length; j++) {
-        if (i < words[j].length) {
-            result += words[j][i];
+    for (let j = 0; j < input.length; j++) {
+        if (i < input[j].length) {
+            result += input[j][i];
         }
     }
 }
