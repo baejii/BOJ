@@ -25,11 +25,10 @@ function triangleType(a, b, c) {
     return "Scalene";
 }
 
-for (let i = 0; i < input.length; i ++) {
-    const sides = input[i].split(' ').map(Number);
-    const a = sides[0];
-    const b = sides[1];
-    const c = sides[2];
+for (let i = 0; i < input.length; i += 3) {
+    const a = input[i];
+    const b = input[i + 1];
+    const c = input[i + 2];
 
     if (a === 0 && b === 0 && c === 0) {
         break;
